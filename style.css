@@ -1,12 +1,12 @@
 html{
     justify-content: center;
     text-align: center;
-    background-color: yellow;
-}
-h3{
+    background-color: mediumaquamarine;
+}h1
+, h2 ,h3{
     font-size: 50px;
     font-family: 'Courier New', Courier, monospace;
-    color: #14efad;
+    color: red;
     text-align: center;
 }
 #grid{
