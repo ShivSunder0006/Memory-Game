@@ -1,0 +1,28 @@
+html{
+    justify-content: center;
+    text-align: center;
+    background-color: yellow;
+}
+h3{
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #14efad;
+    text-align: center;
+}
+#grid{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: center;
+    
+    
+    /* margin: 300px; */
+    /* padding: 3000px; */
+}
+.card{
+    border: solid 2px black;
+    /* padding: 150px 10px; */
+    margin: 10px;
+    border-radius: 5px;
+}
