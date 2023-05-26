@@ -74,7 +74,12 @@ const resultDisplay = document.querySelector("#result")
 let cardChosen = []
 let cardChosenId = []
 const cardsWon = []
+let name = document.querySelector('#nme')
+let tries = document.querySelector('#no')
 
+let userName = prompt("What's your Name?")
+nme.textContent = userName;
+let i = 0
 function createBoard(){
     for(let i=0 ; i<cardArray.length ; i++){
         const card=document.createElement('img')
@@ -98,25 +103,30 @@ function checkMatch(){
     {
         cards[optOne].setAttribute('src','images/Pokemon.png')
         cards[optTwo].setAttribute('src','images/Pokemon.png')
-        alert("You Have choosen the same card")
+       // alert("You Have choosen the same card")
+        i++
     }
 
     else if(cardChosen[0] === cardChosen[1]){
-        alert("You Have Found a Match")
+        //alert("You Have Found a Match")
         cards[optOne].setAttribute('src', "images/White.png")
         cards[optTwo].setAttribute('src', "images/White.png")
         cards[optOne].removeEventListener('click',flipCard)
         cards[optTwo].removeEventListener('click',flipCard)
         cardsWon.push(cardChosen)
+       
     }
     else{
         cards[optOne].setAttribute('src','images/Pokemon.png')
         cards[optTwo].setAttribute('src','images/Pokemon.png')
-        alert("Try Again")
+        // alert("Try Again")
+        i++
     }
     resultDisplay.textContent = cardsWon.length
     cardChosen = []
     cardChosenId = []
+    
+    tries.textContent = i
 
     if(cardsWon.length == (cardArray.length/2)){
         resultDisplay.textContent = "Congratulation you caught'em all"
